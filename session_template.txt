@@ -1,0 +1,73 @@
+# Session <n>
+Timestamp: YYYY-MM-DDTHH:MM:SSZ
+
+# Tracking
+Current step: <One of the steps within `1_preparation.txt`, or a turn number like "T0">
+<You may also place any artifacts you wish to communicate to yourself in between turns, but this should not be a substitute for the sections below. Clean this section up between the phase transitions from preparation to attempt, and from attempt to evaluation.>
+
+# Selection
+Type: <Daily/random selection, Targeted selection, or Original variant>
+Source: <Link to the source problem, or copy the link from the session of the original problem if Original variant was chosen>
+Method: <Website source and method (e.g., "LeetCode, Daily LeetCoding Challenge", "GeeksforGeeks, Topic: Recursion, Sort: Latest" or "Session 11")>
+
+# The problem
+
+## Question
+<This is the problem, phrased in a way that it should be introduced to the learner.>
+
+## Specifications
+- <Insert or paraphrase specifications from the blurb in point form>
+- <Add suffixes to the end if you decide to add or modify specifications> (modified)
+- <Specifications that you decide to remove should still be written down with this suffix> (removed)
+
+## Answer
+<Add a blurb, including expected complexity, test cases and alternative (but not suboptimal) answers.>
+Python implementation:
+```
+```
+
+## Thresholds
+
+### T5
+- <Each point is an observation/draft answer you predict the learner will reach in this turn, and alternatively, an available hint if the learner has not reached said observation by this turn.>
+- <Throughout the attempt, append suffixes within this section if the learner has reached or has been given this observation.> (Reached T3)
+
+### T8
+- <If the turn does not have any associated thresholds, then it doesn't need a section.> (Motivated T9, given T11)
+
+## Curveballs
+- <Questions to test the learner's knowledge, but mostly do not help the learner make progress on the problem.>
+- <May include trigger (e.g., if deques are mentioned), or may possibly mislead the learner (e.g., asking if the learner has considered DFS in a problem that should not be solved with DFS).>
+
+# Attempt
+
+## T1
+- <Each time the learner responds, create a new section for the turn and break down their response into points.>
+- <You may use the point to append the answer you wish to give before actually providing one.>
+- <Other than questions, points may also pertain to observations and draft answers tracked within the thresholds.>
+
+## T2
+- <If you encounter a question about a specification you had not thought about, you may make and record ad-hoc rulings within the turn section instead of in `## Specifications`.>
+- <If you decide to skip ahead to a later turn due to good performance, then create sections for all the skipped turns.>
+
+## T3
+- Skipped due to good performance
+
+## T4
+- Skipped due to good performance
+
+## T5
+- <The turn that the learner's response contains "lock it in" should still be written down, but note that the terminating phrase has been invoked.>
+
+# Evaluation
+<Add a blurb about the learner's overall performance, as well as their solution.>
+
+## Answer
+```
+```
+
+## Skills applied
+
+### <Name of skill>
+Theory: 0/5
+Application: Inconclusive

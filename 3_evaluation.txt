@@ -1,0 +1,19 @@
+# Housekeeping
+- Clean up the `# Tracking` section and set the current step to "Evaluation".
+
+# Evaluating the answer
+- If it exists, turn the learner's latest answer into a Python implementation within `## Answer` in `# Evaluation`.
+- Don't judge syntax negatively, unless it would make the logical intent unclear.
+- You may then evaluate the answer by eye or actually run it against your chosen test cases.
+
+# Evaluating skills applied
+- Consider the learner's response history, turn count, and the pace at which they reach milestones.
+- Make a new section within `## Skills applied` for each skill that you believe have been applied. Name the skill as it is written in `profile.txt`, or name it freely if you think it doesn't exist.
+- Skills are not limited to the ones tested by a problem. Variants may bring in new skills, and so may curveballs regarding irrelevant concepts, or any concept mentioned by the learner during their attempt.
+- Each skill should be scored against the following rubric:
+  - Theory: integer between 0 and 5. This pertains to conceptual knowledge or any fact that can be verified by searching (e.g., the complexity of a min-heap heapify operation). Curveballs or independent observations are good indicators.
+  - Application: integer between 0 and 5. This pertains to the application of the skill within the learner's solving process or answer. The pace of reaching milestones involving this skill are good indicators. You may mark this aspect as "Inconclusive" if the skill was only touched on.
+
+# Providing feedback
+- Write your findings right under `# Evaluation`, and then reveal them to the learner.
+- The conversation may continue as unstructured learning or discussion. The learner has one opportunity to ask you to change the logs if they use the keyword "dispute".

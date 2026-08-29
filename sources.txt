@@ -1,0 +1,38 @@
+# LeetCode
+Within a problem page, all information is available on the left panel. Hints and tags are hidden behind dropdown sections, and official solutions are in the "Editorial" tab.
+- The Daily LeetCoding Challenge contains problems picked from their existing catalogue. Clicking on a day in the calendar widget of the general [problems page](https://leetcode.com/problemset/) redirects to the particular problem's page.
+- Alternatively, the problems page has a table of problems in its main panel which can be sorted and filtered in various ways. From the exposed selection, individual problems may be browsed, and one may be picked at random with the button tooltipped as "Pick One".
+
+## Daily/random selection
+You may use the Daily LeetCoding Challenge once a day (you can check for any session log within `current/` which has a same-day timestamp and has used this source). If there has been a gap of over a day between sessions of this source, you may also use problems from previous days. Finally, you may use Pick One over the entire catalogue as a renewable source. Use that problem's page as the provenance URL (and specify whether it was arrived at via the Daily LeetCoding Challenge).
+
+## Targeted selection
+You may filter the main panel table by company, category and/or tag, and either select Pick One or sort and browse. You may also use curated collections in the [explore](https://leetcode.com/explore/) and [study plan](https://leetcode.com/studyplan/) pages. However, you are not advised to consume problems sequentially because these collections may be modified at any time. If you choose to do so anyway, you may expand this bulleted list below to track the last used indices and any other information.
+- Link to collection: Index (Remarks)
+
+# GeeksforGeeks
+Within a problem page, all information is available on the left panel. Tags and constraints are hidden behind dropdown sections. The official solution, which is in the "Editorial" tab, is not accessible and you should attempt it independently or reconstruct it via user-submitted comments.
+- The landing page for [Problem of the Day](https://www.geeksforgeeks.org/problem-of-the-day), has a highlighted box at the top, where the most current problem (chosen from their existing catalogue) is linked. Previous problems are listed below.
+- There is also a general [problems page](https://www.geeksforgeeks.org/explore) where you can sort and filter like you can in LeetCode, but there is no functionality to pick one at random.
+
+## Daily/random selection
+You may use the current Problem of the Day, once a day. If there has been a gap of over a day between sessions of this source, you may also use problems from previous days. Use that problem's page as the provenance URL (and specify whether it was arrived at via the Problem of the Day).
+
+## Targeted selection
+You may filter the problems page by keyword, topic, difficulty, and/or company, and then browse.
+
+# Codewars
+Codewars are full of user-submitted and collectively improved upon problems, which they call "kata". They are graded by a gamified difficulty system, which are, in ascending difficulty, 8th kyu to 1st kyu, followed by 1st dan to 8th dan. All available information is given in the problem's page, which includes statistics that may be regarded as user feedback about the problem's quality. For example, problems with more attempts are likely to be held to a higher standard of correctness.
+
+In case of missing information, the problem's Discourse tab may contain clarifications and other feedback. Messages may optionally be tagged as "issue", "question" or "suggestion", and the message board can be filtered by these tags. You are advised to use signals like these to determine whether a problem should be modified or even served in this session.
+
+Solutions are hidden until attempted or until the user has attained a ranking close to the problem's intended difficulty. This precludes users without an account like yourself. Solutions are unlikely to be found in the Discourse message board, as they are moderated by skilled users with high trust. Therefore, you should make your own solution after deciding on the set of specifications to present to the learner.
+- Problems may be browsed [here](https://www.codewars.com/kata/). They may be filtered in the left panel by available language variants, status (whether it has been approved by a trusted user), difficulty and tags. In addition to the many ways in which the table can be sorted, there is a button on the right tooltipped "Random sample", which presents a shuffled slice of up to 30 problems which fit the criteria.
+- Collections may be browsed and searched [here](https://www.codewars.com/collections). Being user-curated, they may be updated at any time like with LeetCode collections, and are of variable quality.
+
+## Daily/random selection
+Without filtering, use Random sample and select the first problem. In case you reject the problem, iterate down the shuffled table or reshuffle.
+
+## Targeted selection
+Use the filters, then browse or use Random sample. You may use collections at your own risk, and if you do, you may expand this bulleted list below to track the last used indices and any other information.
+- Link to collection: Index (Remarks)

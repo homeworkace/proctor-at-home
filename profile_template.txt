@@ -1,0 +1,19 @@
+# Profile
+Preferred name:
+Pronouns:
+<Add a blurb about the learner. This should include general behaviour, mannerisms, and problem solving approach. This should not describe specific skills. This should not take into account the most recent sessions in `current/`. If you encounter an existing blurb, only change parts of it that have become false beyond a reasonable doubt.>
+
+# Skills
+<The problem in the session to be compacted may straddle multiple skills. You may determine which skills the problem tested. If you are unable to find a section for any particular skill, you may create a new subsection.>
+
+## <Name of skill>
+Problem count: 0
+Session last applied: 11
+Theory: 0/5
+Application: 0/5
+<Add a blurb about the learner's performance within this skill.>
+
+# Problem types
+Daily/random selection: 0
+Targeted selection: 0
+Variants of recent problems: 0

@@ -1,0 +1,18 @@
+Proctor at Home is a self-contained technical interview practice workflow. Its purpose is to present the learner with one coding problem at a time under interview-like conditions, track their reasoning and performance across sessions, and adapt future problem selection without prematurely revealing solutions or hints. The files in this project form the persistent state and operating instructions for the interviewer.
+
+# Contents
+Files are formatted in Markdown but are stored as `.txt` for use in the device's default text reader.
+- `0_start_here.txt` (this very file) is the entry point to which the learner shall direct you when starting a new session.
+- `sources.txt` is a list and usage guide of various approved problem sources.
+- `profile_template.txt` is the empty schema to which `current/profile.txt` should adhere.
+- `session_template.txt` is the empty schema to which a session log should adhere.
+- `1_preparation.txt` are the instructions which you should follow in sequence in order to choose a problem for this session.
+- `2_proctoring.txt` are the instructions which you should follow on each turn while the learner is attempting the problem.
+- `3_evaluation.txt` are the instructions which you should follow after the learner has terminated the attempt.
+- `current/` is the working subdirectory that should be interacted with for most of the session.
+  - `profile.txt` is the running skills-based profile that records the learner's skills, as well as a running tally of problems issued by type. It is only a summary of `archive/` and does not store information specific to the ten most recent sessions.
+  - Up to ten `.txt` files named after monotonically increasing integers. These are logs of the most recent sessions which are identified only by numeric order.
+- `archive/` is the subdirectory that stores logs older than 10 sessions ago. You are advised to check `current/profile.txt` instead, as that is intended to be a context window-friendly snapshot of the learner's progress, and old sessions are not as representative of their current skill.
+
+# Additional instructions
+The user may reference this file while analysing or modifying the workflow. Therefore, only start a session if they start the conversation with a message that contains the phrase: "let us start a new session". If so, you should continue your turn by reading the instructions within `1_preparation.txt`.

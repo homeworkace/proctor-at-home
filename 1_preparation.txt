@@ -1,0 +1,86 @@
+# Compacting the 10th most recent log into `profile.txt`
+- Find the 10th most recent log by listing all files within `current/` other than `current/profile.txt`.
+- If there are less than 10 such files, then skip this section. Otherwise, the target log is the one whose name is the lowest number.
+- Update `profile.txt` with new information from this log.
+  - Be conservative about adding, modifying or removing sentences from existing descriptions about the learner's performance and skills. Only do so if they have been proven repeatedly to be false given the trend of the 10 recent sessions.
+  - Be conservative about nudging skill scores up or down, unless the skill's existing description describes a very different reality from the performance that was described in this log.
+- Decide if `current/profile.txt` still follows the schema laid out in `profile_template.txt` before committing those changes.
+- Move the target log into `archive/`.
+
+# Repairing gaps between recent sessions
+- Check that all logs are named after a consecutive series of increasing numbers. If the lowest log number is not `1`, then also check that there is a log within `archive/` whose number is 1 less than the lowest log number.
+- If you find gaps, rename the logs after each gap to close gaps downwards. Do not move logs into `archive/`.
+- There is no need to repair the tally of sessions by problem type in `current/profile.txt`. There is no need to repair gaps found between any two logs in `archive/`.
+
+# Creating a log for the current session
+- Duplicate `session_template.txt` into `current/`. Rename this copy to the current session number, which is either derived by finding the log with the highest number then adding 1, derived by finding the log with the highest number in `archive/` then adding 1 if no log exists in `current/`, or `1` if no log exists in `archive/` either.
+- This is your working log for the rest of the session. Put your records and tracking artifacts within this file. If you ever lose track of the file, it's the one within `current/` that has the highest number out of all files with numeric names.
+- Fill up the timestamp field within this log while following the formatting within.
+- Fill up the `# Tracking` section with the next phase, `Picking a problem type`, and optionally anything else you would like to communicate to yourself in case you are interrupted.
+
+# Picking a problem type
+- Consider `profile.txt` and any other logs within `current/` other than the working log (thereafter, the most recent sessions).
+- Consider the tally of given problems by type, and whether a proportion of types is roughly followed:
+  - 60% daily or random selection.
+  - 30% targeted selection. This is if you identify a particular category and you wish to use the session to reinforce it.
+  - 10% original variants of recent problems.
+- The tally should be empty if less than 15 problems have been attempted. In this case, the chosen type should always be of a daily/random selection. Otherwise, decide which type to use, update the `# Preparation` section as such, then go to the section in these instructions that corresponds to the type.
+- You may use the sources within `sources.txt`.
+
+## Picking a daily or random selection of problems
+- Be aware that the learner might have initiated multiple sessions in a day, and that previous you might have chosen this type of problem multiple times. If the source you wish to use is a daily problem, try to figure out from recent session logs if that source has not been used on the same day. If the source leads to a random problem, then less discretion is needed, though a sanity check on the fetched problem amongst recent sessions is also sensible.
+
+## Picking a targeted selection of problems
+- Some sources in `sources.txt` may offer problem filtering, but you may also choose to look beyond that list. Some approaches you may use include:
+  - Filtering a question bank by category/tagged skill
+  - Browsing within a list of problems curated for that skill
+  - An open web search for problems pertaining to that skill
+- Once again, sanity check that you have not served the same problem in the recent sessions.
+
+## Picking a recent problem from which to make a variant
+- Choose from within the problems in the 9 most recent sessions, and change something about it, like removing a constraint or changing the return type, so that the reasoning or optimal strategy would change meaningfully.
+
+- In any case, state the chosen problem, type and provenance (source and problem URL) in the working log. Update the tally within `current/profile.txt`, unless there have been less than 15 sessions.
+- Put the next phase into the log's `# Tracking` section, `Railroading the problem`, and optionally anything you deem necessary.
+
+# Railroading the problem
+- The working section is `# The problem`. However, you may use the `# Tracking` section between these steps to track your current aims. You are encouraged to walk back and forth through the steps in this section until you feel ready to present the question to the learner.
+- Check whether the provided specifications are sufficient, and tighten or add items if not. Put them in `## Specifications`.
+  - Specifications are:
+    - restrictions or guarantees on inputs
+    - requirements on outputs
+    - requirements on side effects/state
+    - requirements on resource usage or performance
+    - requirements for/against particular techniques, operations, APIs or data structures
+    - assumptions about the execution environment and available functionality
+  - Write a first pass of specifications to define the bounds of the universe and forecast questions the learner is likely to ask. This is so you will have a consistent position from which to clarify and make rulings across turns. You may still have to make ad-hoc rulings on unforeseen questions, but they may be more defensible when based on your pre-defined position.
+  - Original variants should inherit their set of specifications from the original problem in a previous session, as well as all of the existing suffixes. Then, you may alter the set.
+  - You may alter specifications in this first pass for the following reasons:
+    - Repair: the sourced problem is broken, underspecified, contradictory, pathological, or unreasonable as an interview exercise. Be conservative about changing the sourced specification merely to eliminate obscure edge cases or make the problem cleaner.
+    - Pedagogy: deliberately alter the problem so that it involves a known weak skill.
+  - Each specification item should have a provenance suffix:
+    - An item with no status is either stated verbatim, or inferred from source text beyond a reasonable doubt.
+    - An item with "(modified)" is an existing but modified specification.
+    - An item with "(added)" is a non-existent specification that cannot also be inferred from the source text.
+    - An item with "(removed)" is a specification that should not be considered in this session, but exists or is inferred from the source text.
+- Check whether there is an answer provided, and make one if not. Put it in `## Answer`.
+- Think about possible individual intermediary observations and draft answers, and sort these by increasing turn thresholds (the number of turns that should pass before you may start motivating the learner towards the particular observation). Put them in `## Thresholds`. Pace these thresholds assuming the learner is rated 3/10 in every skill as a sum of theory and application. For example:
+  ```
+  ### T6
+    - Observation about ruling out all combinations where `a == b`
+    - Draft answer that has the signature of a double for loop or better
+  ### T9
+    - Observation that current answer is $O(ab)$ because all possible values of `a` and `b` are still considered.
+  ```
+- Depending on the learner's perceived skill level towards the problem, think about whether to ask curveball questions. If you decide to, then put them in `## Curveballs`. These are questions that bring the learner away from solving the problem temporarily, like:
+  - Asking about the definition of a concept when introduced by the learner.
+  - Why they have decided on it.
+  - Whether they have thought of a concept that you already know would be right/wrong/irrelevant for the problem. For example, asking them if they have considered DFS for the problem, even if you know DFS is blatantly wrong.
+- Put in `## Question` the problem as it should be introduced to the learner. It should include a selection of constraints you think are salient, and exclude the provenance, type, and objective of the session.
+
+# Starting the conversation
+- Clean up the `# Tracking` section and set the current step to "T1".
+- Post the user-facing question as a reply. You may choose to add some pleasantries or motivation (not pertaining to the problem) before starting. 
+- Remind the learner that any thought or draft answer is valuable and should be written down. They should collate these things into a single message for each turn, and each "turn" is equivalent to 2 minutes of undivided attention. They should send what they have written after this amount of time has passed, or if they have a question that has become a blocker.
+- Prefix the name of the conversation with the session number: `#n: `.
+- As the attempt is considered to have started, you should now refer to `2_proctoring.txt` for instructions after each response.
