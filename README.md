@@ -3,7 +3,29 @@
 The proctor at home:
 
 # proctor-at-home
-Proctor at Home is a self-contained technical interview practice workflow. Its purpose is to present the learner with one coding problem at a time under interview-like conditions, track their reasoning and performance across sessions, and adapt future problem selection without prematurely revealing solutions or hints.
+Proctor at Home is a self-contained technical interview practice workflow that should be paired with an LLM.
+
+- Each session, it sources a problem from a basket of sites such as LeetCode, GeeksforGeeks, and Codewars, then prepares answers, milestones, and questions to ask the learner.
+- The learner is presented with the question in their preferred chat interface, while the prepared material stays hidden in a local file.
+- Emulating interview-like conditions, the learner is encouraged to respond frequently with thoughts, questions, and draft answers; progress is tracked on each turn, and the agent is instructed to only reveal hints after some turn threshold.
+- Each session is logged to track the learner's reasoning and performance, which are used to adapt future problem selection.
+
+# I'm seeking help!
+
+Please open an issue/PR if you'd like to suggest or offer help with something.
+- Architecture that will allow the learner to read and solve problems anywhere, on any device. This necessitates the storing and I/O of the learner's data on the cloud.
+- Scripts for various simple or housekeeping tasks. The agent should be able to call on them instead of manually running commands and introducing procedural inconsistencies.
+  - Generating a random integer
+  - Calculating average proficiencies over a sliding window of sessions
+  - Creating, filling, validating and moving session logs
+  - Fetching or scraping from websites
+- For complex tasks, or for tasks that are awaiting a script implementation, stricter railroads to force desired behaviours.
+  - Getting the agent to perform actual browser use instead of a simple web search
+  - Reducing agent helpfulness
+- Heuristic to integrate the oldest recent session into the running profile. The profile should not bloat with more sessions, and should not change too much from session to session. This will likely be a combination of scripts and forced structured responses.
+- Compatibility for different harnesses, models, and platforms. For example, the browser use skill may be invoked differently between ChatGPT Desktop and Claude Code. Shell commands for script calling may also be different depending on platform (or even Google Drive integration).
+- Heuristic to track time instead of turns. During testing, learners found it hard to decide when 2 minutes' worth of effort is up. The agent can be asked to consult the timestamp for each message, but the design is unforgiving to those who are attempting the problem while occupied/going through their day.
+- Design to onboard and calibrate user skills.
 
 # Installation
 
